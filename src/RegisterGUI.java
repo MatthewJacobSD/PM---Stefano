@@ -124,7 +124,6 @@ public class RegisterGUI extends JFrame {
         gbc.gridy++;
         gbc.gridwidth = 2;
         panel.add(registerButton, gbc);
-
         getContentPane().add(panel);
         setVisible(true);
     }

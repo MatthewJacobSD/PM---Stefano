@@ -32,4 +32,9 @@ public class ViewPasswordsGUI extends JFrame {
         getContentPane().add(panel);
         setVisible(true);
     }
+
+    public static void main(String [] args){
+        PasswordManagerGUI.authenticateUser()
+        new ViewPasswordsGUI();
+    }
 }
