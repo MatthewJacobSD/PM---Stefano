@@ -88,7 +88,7 @@ public class PasswordManagerGUI extends JFrame {
         setVisible(true);
     }
 
-    private boolean authenticateUser(String username, String password) {
+    private static boolean authenticateUser(String username, String password) {
         List<User> users = UserDatabase.readUsers();
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPasswordHash().equals(UserDatabase.hashPassword(password))) {

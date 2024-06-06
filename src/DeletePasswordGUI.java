@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DeletePasswordGUI extends JFrame {
-
+    User user;
     public DeletePasswordGUI() {
         initComponents();
     }
@@ -40,7 +40,7 @@ public class DeletePasswordGUI extends JFrame {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        new PasswordManagementGUI();
+                        new PasswordManagementGUI(user);
                     }
                 });
             }

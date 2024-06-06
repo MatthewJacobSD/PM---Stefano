@@ -112,12 +112,18 @@ public class RegisterGUI extends JFrame {
                     return;
                 }
 
-                // Register the user
+                // Create a new user object
                 User newUser = new User(username, email, UserDatabase.hashPassword(password));
-                UserDatabase.saveUser(newUser);
-                JOptionPane.showMessageDialog(RegisterGUI.this, "User registered successfully");
-                dispose();
-                new PasswordManagerGUI(); // Open login page
+
+                // Save the new user to the database
+                boolean success = UserDatabase.saveUser(newUser);
+                if (success) {
+                    JOptionPane.showMessageDialog(RegisterGUI.this, "User registered successfully");
+                    dispose();
+                    new PasswordManagerGUI(); // Open login page
+                } else {
+                    JOptionPane.showMessageDialog(RegisterGUI.this, "Failed to register user", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
         gbc.gridx = 0;

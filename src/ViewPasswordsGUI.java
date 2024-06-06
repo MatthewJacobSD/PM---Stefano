@@ -2,13 +2,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public class ViewPasswordsGUI extends JFrame {
+import static com.sun.tools.classfile.AccessFlags.Kind.Method;
 
-    public ViewPasswordsGUI() {
-        initComponents();
+public class ViewPasswordsGUI extends JFrame {
+    User user;
+
+    public ViewPasswordsGUI(User user) {
+        this.user = user;
+        initComponents(user);
     }
 
-    private void initComponents() {
+    private void initComponents(User user) {
         setTitle("View Passwords");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(700, 500);
@@ -21,20 +25,17 @@ public class ViewPasswordsGUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(passwordsTextArea);
         panel.add(scrollPane, BorderLayout.CENTER);
 
-        List<String[]> passwords = PasswordFileManager.readPasswords();
-        for (String[] password : passwords) {
-            passwordsTextArea.append("Service: " + password[0] + "\n");
-            passwordsTextArea.append("Username: " + password[1] + "\n");
-            passwordsTextArea.append("Password: " + password[2] + "\n");
-            passwordsTextArea.append("Usage: " + password[3] + "\n\n");
+        // Get passwords from the user object
+        List<Password> passwords = user.getPasswords();
+        for (Password password : passwords) {
+            passwordsTextArea.append("Service: " + passwords.getFirst().getServiceName() + "\n");
+            passwordsTextArea.append("Username: " + passwords.get(1).getUsername() + "\n");
+            passwordsTextArea.append("Password: " + passwords.get(2).getPassword() + "\n");
+            passwordsTextArea.append("Purpose: " + passwords.get(3).getPurpose() + "\n\n");
         }
 
         getContentPane().add(panel);
         setVisible(true);
     }
 
-    public static void main(String [] args){
-        PasswordManagerGUI.authenticateUser()
-        new ViewPasswordsGUI();
-    }
 }

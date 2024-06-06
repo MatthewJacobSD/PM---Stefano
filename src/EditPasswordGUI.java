@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class EditPasswordGUI extends JFrame {
-
+    User user;
     public EditPasswordGUI() {
         initComponents();
     }
@@ -59,7 +59,7 @@ public class EditPasswordGUI extends JFrame {
                         return;
                     }
                 }
-                new PasswordManagementGUI();
+                new PasswordManagementGUI(user);
             }
         });
     }

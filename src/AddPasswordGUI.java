@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddPasswordGUI extends JFrame {
-
+    User user;
     public AddPasswordGUI() {
         initComponents();
     }
@@ -98,7 +98,7 @@ public class AddPasswordGUI extends JFrame {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        new PasswordManagementGUI();
+                        new PasswordManagementGUI(user);
                     }
                 });
             }

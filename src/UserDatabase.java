@@ -9,13 +9,15 @@ public class UserDatabase {
     private static final String USER_FILE = "users.txt";
 
     // Save a new user to the file
-    public static void saveUser(User user) {
+    public static boolean saveUser(User user) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_FILE, true))) {
             writer.write(user.getUsername() + "," + user.getEmail() + "," + user.getPasswordHash());
             writer.newLine();
+            return true; // Return true upon successful write
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return false; // Return false if an exception occurs
     }
 
     // Read all users from the file

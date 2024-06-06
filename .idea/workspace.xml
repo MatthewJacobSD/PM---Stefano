@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec6fb10e-b436-4539-a294-b60ec5de2924" name="Changes" comment="PM">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/passwords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddPasswordGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddPasswordGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DeletePasswordGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DeletePasswordGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditPasswordGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditPasswordGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenuGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PasswordManagementGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManagementGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PasswordManagerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManagerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PasswordUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordUsage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegisterGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ViewPasswordsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewPasswordsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +41,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MatthewJacobSD"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MatthewJacobSD&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MatthewJacobSD/PM---Stefano.git",
-    "accountId": "f20a26de-64ac-4ea0-958a-95c1144e3c98"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MatthewJacobSD/PM---Stefano.git&quot;,
+    &quot;accountId&quot;: &quot;f20a26de-64ac-4ea0-958a-95c1144e3c98&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -53,6 +64,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AddPasswordGUI.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.ViewPasswordsGUI.executor": "Run",
     "RunOnceActivity.CodyAccountHistoryMigration": "true",
@@ -79,7 +91,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="PasswordManager" />
@@ -124,6 +136,7 @@
       <workItem from="1715215056187" duration="5880000" />
       <workItem from="1716921193559" duration="22166000" />
       <workItem from="1717263614096" duration="7247000" />
+      <workItem from="1717657700927" duration="7142000" />
     </task>
     <task id="LOCAL-00001" summary="PM">
       <option name="closed" value="true" />
@@ -197,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716947583409</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="PM">
+      <option name="closed" value="true" />
+      <created>1717657782026</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717657782026</updated>
+    </task>
+    <task id="LOCAL-00011" summary="PM">
+      <option name="closed" value="true" />
+      <created>1717657839558</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717657839558</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

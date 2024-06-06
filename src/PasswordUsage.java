@@ -1,40 +1,30 @@
 import java.util.Objects;
 
 public class PasswordUsage {
-    private String serviceName;
-    private String username;
-    private String password;
+    private Password password;  // Changed to Password object
+    private User user;
     private String usage;
 
-    public PasswordUsage(String serviceName, String username, String password, String usage) {
-        this.serviceName = serviceName;
-        this.username = username;
-        this.password = password;
+    public PasswordUsage(Password password, User user, String usage) {
+        this.password = password;  // Store Password object
+        this.user = user;
         this.usage = usage;
     }
 
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
+    public Password getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(Password password) {
         this.password = password;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getUsage() {
@@ -50,23 +40,21 @@ public class PasswordUsage {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PasswordUsage that = (PasswordUsage) o;
-        return Objects.equals(serviceName, that.serviceName) &&
-                Objects.equals(username, that.username) &&
-                Objects.equals(password, that.password) &&
+        return Objects.equals(password, that.password) &&
+                Objects.equals(user, that.user) &&
                 Objects.equals(usage, that.usage);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(serviceName, username, password, usage);
+        return Objects.hash(password, user, usage);
     }
 
     @Override
     public String toString() {
         return "PasswordUsage{" +
-                "serviceName='" + serviceName + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                "password='" + password.getPassword() + '\'' +
+                ", user='" + user.getUsername() + '\'' +
                 ", usage='" + usage + '\'' +
                 '}';
     }

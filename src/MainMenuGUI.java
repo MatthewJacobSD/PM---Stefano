@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainMenuGUI extends JFrame {
+    User user;
 
     private static MainMenuGUI instance;
 
@@ -62,7 +63,7 @@ public class MainMenuGUI extends JFrame {
     }
 
     private void openPasswordManagementWindow() {
-        PasswordManagementGUI passwordManagementGUI = new PasswordManagementGUI();
+        PasswordManagementGUI passwordManagementGUI = new PasswordManagementGUI(user);
         passwordManagementGUI.setVisible(true);
     }
 

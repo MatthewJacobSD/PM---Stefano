@@ -4,8 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PasswordManagementGUI extends JFrame {
+    private static User user;
 
-    public PasswordManagementGUI() {
+    public PasswordManagementGUI(User user) {
         initComponents();
     }
 
@@ -61,11 +62,11 @@ public class PasswordManagementGUI extends JFrame {
         gbc.gridy++;
         panel.add(deleteButton, gbc);
 
-        JButton viewButton = new JButton("View Passwords"); // New button
+        JButton viewButton = new JButton("View Passwords");
         viewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ViewPasswordsGUI(); // Open the window to view passwords
+                new ViewPasswordsGUI(user); //Open the window to view passwords
             }
         });
         gbc.gridy++;
@@ -90,7 +91,7 @@ public class PasswordManagementGUI extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new PasswordManagementGUI();
+                new PasswordManagementGUI(user);
             }
         });
     }
